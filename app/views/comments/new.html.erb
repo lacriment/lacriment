@@ -1,0 +1,10 @@
+<% if @comment.errors.any? %>
+  <div id="error_explanation">
+    <h3>Kaydetme esnasında karşılaşılan <%= @comment.errors.count %> sorun şunlar:</h3>
+    <% @comment.errors.full_messages.each do |message| %>
+      <p>
+        <%= message %>
+      </p>
+    <% end %>
+  </div>
+<% end %>

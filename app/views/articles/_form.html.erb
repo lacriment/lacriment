@@ -1,0 +1,26 @@
+<%= form_for @article do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h3>Kaydetme esnasında karşılaşılan <%= @article.errors.count %> sorun şunlar:</h3>
+      <% @article.errors.full_messages.each do |message| %>
+        <p>
+          <%= message %>
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.text_field :title, placeholder: 'başlık', class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.text_field :tags, placeholder: 'ruby, linux, programlama', class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.text_area :body, placeholder: 'içerik', rows: 10, class: 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.submit 'Kaydet', class: 'btn btn-lg btn-primary btn-block' %>
+    </div>
+  </div>
+<% end %>

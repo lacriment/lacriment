@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* { margin: 0; padding: 0; }
+body {
+  font-family: Source Sans Pro;
+  background-color: white;
+}
+h1 {
+  font-weight: bold;
+  font-size: 3.4em;
+  font-weight: bold;
+  color: #337ab7;
+  margin-top: 10px;
+}
+h2 {
+  font-weight: bold;
+  font-family: Open Sans;
+  color: #555;
+}
+h2 a {
+  font-size: 1.5em;
+}
+header h1:hover {
+  color: #888;
+}
+a:hover {
+  text-decoration: underline;
+}
+nav {
+  color: #999;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+nav p {
+  text-align: center;
+}
+nav a:hover {
+  color: #444;
+  text-decoration: none;
+}
+header {
+  border-bottom: 4px solid #444;
+}
+header h1 {
+  font-size: 4.5em;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+header nav {
+  margin: 0 auto;
+}
+.content {
+  height: 100%;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3px 10px;
+}
+#banner {
+  font-size: 5em;
+}
+footer {
+  width: 100%;
+  border-top: 4px solid #444;
+}
+footer .content {
+  text-align: center;
+  padding: 10px 5px;
+}
+.form-control {
+  margin: 5px 0;
+}
+section {
+  min-height: 800px;
+}
+article p {
+  font-family: Tinos;
+  font-size: 1.7em;
+}
+article p span a {
+  color: #888;
+}
+article p span {
+  background-color: #efefff;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.notice {
+  padding: 3px 5px;
+  background-color: #efefff;
+}
+.comment {
+  padding: 5px 10px;
+  background-color: #efefff;
+  border-radius: 4px;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+}
+.comment p {
+  font-size: 1.5em;
+}
+.c_date {
+  float: right;
+  font-size: 1em;
+}
+.c_name {
+  font-size: 1.2em;
+}
+#comments {
+  margin-bottom: 5em;
+}
+.admin-notice {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #efefff;
+}

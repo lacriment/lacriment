@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  tags: 
+  body: 
+  views: 1
+
+two:
+  title: 
+  tags: 
+  body: 
+  views: 1

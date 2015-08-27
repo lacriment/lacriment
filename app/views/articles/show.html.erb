@@ -1,0 +1,62 @@
+<h1>
+  <%= @article.title %>
+</h1>
+<article>
+  <p>
+    <span>
+    <%= @article.created_at.to_formatted_s(:long) %>
+    </span>
+  </p>
+  <p>
+    <%= @article.body %>
+  </p>
+  <p>
+    <% @article.tags.split(', ').each do |tag| %>
+      <span>
+          <%= link_to tag, articles_path %>
+      </span>
+    <% end %>
+  </p>
+</article>
+<hr>
+<article id="comments">
+  <% if notice %>
+    <strong class="notice"><%= notice %></strong>
+  <% end %>
+  <% @comments.each do |comment| %>
+    <% if current_user && current_user.admin %>
+    <div class="comment">
+      <strong class="c_name">
+        <%= comment.name %> --- <%= comment.email %>:
+      </strong>
+      <p>
+        <%= comment.body %>
+      </p>
+      <strong class="c_date">
+        <%= comment.created_at.to_formatted_s(:long) %>
+      </strong>
+      <% if comment.visible %>
+        <%= link_to "Kaldır", swap_comment_visibility_path(comment.id), class: "btn btn-danger" %>
+      <% else %>
+        <%= link_to "Onayla", swap_comment_visibility_path(comment.id), class: "btn btn-success" %>
+      <% end %>
+    </div>
+    <% else %>
+      <% if comment.visible %>
+      <div class="comment">
+        <strong class="c_name">
+          <%= comment.name %>
+        </strong>
+        <p>
+          <%= comment.body %>
+        </p>
+        <strong class="c_date">
+          <%= comment.created_at.to_formatted_s(:long) %>
+        </strong>
+      </div>
+      <% end %>
+    <% end %>
+  <% end %>
+  <h3><strong>Yorum Yap</strong></h3>
+  <%= render 'comments/form' %>
+</article>

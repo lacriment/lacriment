@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  article_id: 1
+  email: MyString
+  name: MyString
+  body: MyText
+  visible: false
+  client_ip: MyString
+
+two:
+  article_id: 1
+  email: MyString
+  name: MyString
+  body: MyText
+  visible: false
+  client_ip: MyString

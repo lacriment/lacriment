@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lacriment</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="taha ibrahim bayram, lacriment">
+  <meta name="author" content="taha ibrahim bayram">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- <%= stylesheet_link_tag 'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track' => true %> -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= yield :head %>
+</head>
+<body>
+  <header>
+    <div class="content">
+      <h1 id="banner">lacriment</h1>
+      <nav>
+          <p>navigation = [
+          <a href="/">Yazılar</a>,
+          <a href="http://github.com/lacriment">Github</a>,
+          <a href="mailto:lacriment@gmail.com">E-posta</a>
+          ]</p>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <div class="content">
+      <%= yield %>
+    </div>
+  </section>
+  <footer>
+    <div class="content">
+    <p>Copyleft | Hiçbir hakkı saklı değildir. | Tüm içerikler kaynağı gösterilmeksizin kullanıma açıktır.</p>
+    <b>Taha İbrahim Bayram</b>
+    </div>
+  </footer>
+</body>
+</html>
