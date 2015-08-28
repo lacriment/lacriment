@@ -46,6 +46,8 @@ group :development, :test do
   gem 'pry'
 end
 
+gem 'passenger'
+
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
 gem 'kaminari'
