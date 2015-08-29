@@ -13,17 +13,9 @@
  *= require_tree .
  *= require_self
  */
-@font-face {
-  font-family: 'Source Sans Pro';
-  src:url('SourceSansPro-Regular.ttf');
-}
-@font-face {
-  font-family: 'Tinos';
-  src:url('Tinos-Regular.ttf');
-}
 * { margin: 0; padding: 0; }
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: white;
 }
 h1 {
@@ -35,7 +27,7 @@ h1 {
 }
 h2 {
   font-weight: bold;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   color: #555;
 }
 h2 a {
@@ -96,7 +88,7 @@ section {
   min-height: 800px;
 }
 article p {
-  font-family: 'Tinos';
+  font-family: 'Tinos', serif;
   font-size: 1.7em;
 }
 article p span a {
