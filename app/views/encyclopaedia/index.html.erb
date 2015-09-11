@@ -1,7 +1,9 @@
-
+<% title 'Encyclopaedia' %>
 <h1 style="text-align:center;">Encyclopaedia</h1>
 <hr />
-
+<% if current_user && current_user.admin %>
+  <%= link_to 'New Encyclopaedium', new_encyclopaedium_path, class: 'btn btn-block btn-success' %>
+<% end %>
 <% @encyclopaedia.each do |encyclopaedium| %>
 <h2><%= encyclopaedium.title %></h2>
 <p class="encyclopaedium"><%= encyclopaedium.body %></p>
@@ -9,10 +11,6 @@
   <%= link_to 'Düzenle', edit_encyclopaedium_path(encyclopaedium), class:'btn btn-info' %>
   <%= link_to 'Kaldır', encyclopaedium, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-default' %>
 <% end %>
-<% end %>
-<% if current_user && current_user.admin %>
-<hr>
-<%= link_to 'New Encyclopaedium', new_encyclopaedium_path %>
 <% end %>
 <%= link_to_next_page @encyclopaedia, 'Öncekiler' %>
 <%= link_to_previous_page @encyclopaedia, 'Sonrakiler' %>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lacriment</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="taha ibrahim bayram, lacriment">
-  <meta name="author" content="taha ibrahim bayram">
+  <title>
+    <%= if content_for?(:title) then yield(:title) end %>
+</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="author" content="Taha İbrahim Bayram, Lacriment">
+  <meta name="description" content="lacriment, taha ibrahim bayram, yazılım, programlama, linux, gnu" />
+  <title><% if content_for?(:title) %><%= yield(:title) %><% else %>Lacriment<% end %></title>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Tinos' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
