@@ -2,7 +2,7 @@ class Article < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  paginates_per 2
+  paginates_per 5
 
   validates :title, presence: true, length: { minimum: 5 }
   validates :tags, presence: true, length: { minimum: 5 }

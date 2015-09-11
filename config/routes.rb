@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  resources :encyclopaedia
   devise_for :users
   root 'articles#index'
+  as :user do
+    get '/l' => 'devise/sessions#new'
+  end
   resources :articles
   resources :comments
   get 'comments/swap_visibility/:comment_id', to: 'comments#swap_visibility', as: 'swap_comment_visibility'
