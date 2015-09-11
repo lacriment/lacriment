@@ -12,14 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: 'başlık', class: 'form-control' %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body,  placeholder: 'giri', class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Kaydet', class: 'btn btn-lg btn-primary btn-block' %>
   </div>
 <% end %>
