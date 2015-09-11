@@ -12,7 +12,7 @@
     <%= @article.body %>
   </p>
   <p>
-    <% @article.tags.split(', ').each do |tag| %>
+    <% @article.tags.split(/\s?,\s?/).each do |tag| %>
       <span>
           <%= link_to tag, articles_path %>
       </span>
