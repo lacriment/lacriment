@@ -37,10 +37,11 @@
         <%= comment.created_at.to_formatted_s(:long) %>
       </strong>
       <% if comment.visible %>
-        <%= link_to "Kaldır", swap_comment_visibility_path(comment.id), class: "btn btn-danger" %>
+        <%= link_to "Kaldır", swap_comment_visibility_path(comment.id), class: "btn btn-warning" %>
       <% else %>
         <%= link_to "Onayla", swap_comment_visibility_path(comment.id), class: "btn btn-success" %>
       <% end %>
+      <%= link_to 'Sil', comment, method: :delete, class:'btn btn-danger', data: { confirm: 'emin misin?' } %>
     </div>
     <% else %>
       <% if comment.visible %>
