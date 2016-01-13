@@ -9,7 +9,7 @@
     </span>
   </p>
   <p>
-    <%= @article.body %>
+    <%= @article.body.html_safe %>
   </p>
   <p>
     <% @article.tags.split(/\s?,\s?/).each do |tag| %>
