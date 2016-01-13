@@ -89,7 +89,7 @@ section {
 }
 article p {
   font-family: 'Tinos', serif;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 article p span a {
   color: #888;
@@ -131,4 +131,14 @@ article p span {
 }
 .encyclopaedium {
   font-size:1.2em;
+}
+
+article blockquote {
+  color : #777;
+  font-family: 'Tinos', serif;
+  font-size: 1.3em;
+}
+
+article blockquote:hover {
+  color : #222;
 }
